@@ -50,6 +50,29 @@ app.get('/transactions', (req, res) => {
   });
 });
 
+// Rota para obter o resumo financeiro
+app.get('/summary', (req, res) => {
+  db.all('SELECT type, SUM(value) AS total FROM transactions GROUP BY type', [], (err, rows) => {
+    if (err) {
+      return res.status(500).json({ error: 'Failed to fetch summary' });
+    }
+    const summary = {
+      income: 0,
+      expenses: 0
+    };
+    
+    rows.forEach(row => {
+      if (row.type === 'receita') {
+        summary.income = row.total;
+      } else if (row.type === 'despesa') {
+        summary.expenses = row.total;
+      }
+    });
+
+    res.json(summary);
+  });
+});
+
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`);
 });
