@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Finanças Pessoais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestão de Finanças Pessoais</h1>
+        </header>
+        
+        <main>
+            <section class="input-section">
+                <h2>Adicionar Transação</h2>
+                <form id="transaction-form">
+                    <label for="type">Tipo:</label>
+                    <select id="type" name="type" required>
+                        <option value="expense">Despesa</option>
+                        <option value="income">Receita</option>
+                    </select>
+                    
+                    <label for="description">Descrição:</label>
+                    <input type="text" id="description" name="description" required>
+                    
+                    <label for="amount">Valor:</label>
+                    <input type="number" id="amount" name="amount" required>
+                    
+                    <button type="submit">Adicionar</button>
+                </form>
+            </section>
+            
+            <section class="summary-section">
+                <h2>Resumo Financeiro</h2>
+                <p id="total-income">Receitas: R$ 0,00</p>
+                <p id="total-expenses">Despesas: R$ 0,00</p>
+            </section>
+
+            <section class="history-section">
+                <h2>Histórico de Transações</h2>
+                <ul id="transaction-list">
+                    <!-- Transações serão exibidas aqui -->
+                </ul>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2024 Gestão de Finanças Pessoais</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
