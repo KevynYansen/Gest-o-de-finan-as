@@ -93,5 +93,5 @@ Este projeto é licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE)
 Se você tiver alguma dúvida ou sugestão, sinta-se à vontade para entrar em contato:
 
 - **Nome**: Kevyn Yansen
-- **E-mail**: kevyn.yansen@example.com
+- **E-mail**: kevynyansen9@gmail.com
 - **GitHub**: [KevynYansen](https://github.com/KevynYansen)
